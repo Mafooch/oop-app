@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -89,6 +90,9 @@
                                     <constraint firstAttribute="width" constant="125" id="q1i-df-MyR"/>
                                 </constraints>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayer1AttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5OV-Qy-uIp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbL-3Y-8oG">
                                 <rect key="frame" x="101" y="285" width="97" height="25"/>
@@ -103,6 +107,9 @@
                                     <constraint firstAttribute="width" constant="125" id="uu4-ka-FZr"/>
                                 </constraints>
                                 <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayer2AttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vsl-F9-skc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-oD-xQ1">
                                 <rect key="frame" x="396" y="287" width="97" height="25"/>
@@ -110,6 +117,25 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-0Y-iKt">
+                                <rect key="frame" x="211" y="116" width="156" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="LfO-Es-6y3"/>
+                                    <constraint firstAttribute="height" constant="71" id="gFy-lT-tK8"/>
+                                    <constraint firstAttribute="width" secondItem="dlz-0Y-iKt" secondAttribute="height" multiplier="156:71" id="lI7-fb-VsA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Italic" family="Trebuchet MS" pointSize="25"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="1"/>
+                                <state key="normal" title="Play Again?" backgroundImage="text-holder">
+                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lI7-fb-VsA"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,6 +152,7 @@
                             <constraint firstItem="pf0-Ql-fnI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VnH-pL-4Al"/>
                             <constraint firstItem="xdn-Vs-DaQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WIl-qs-1yY"/>
                             <constraint firstItem="Jpe-cw-etU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOd-nj-x8l"/>
+                            <constraint firstItem="dlz-0Y-iKt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WRL-Fn-v0A"/>
                             <constraint firstItem="pf0-Ql-fnI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XY1-2i-YiV"/>
                             <constraint firstItem="8xU-wI-2Xb" firstAttribute="centerX" secondItem="r42-S9-oH7" secondAttribute="centerX" id="YTc-Y2-SYf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xdn-Vs-DaQ" secondAttribute="bottom" id="b4N-sS-qTk"/>
@@ -142,6 +169,7 @@
                             <constraint firstItem="Jpe-cw-etU" firstAttribute="top" secondItem="Ew6-rU-kzA" secondAttribute="bottom" constant="14" id="lro-4p-6Ci"/>
                             <constraint firstItem="j1D-VN-4db" firstAttribute="centerX" secondItem="Jpe-cw-etU" secondAttribute="centerX" id="qZ0-RF-MbN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8xU-wI-2Xb" secondAttribute="trailing" constant="56" id="vDS-mD-GuU"/>
+                            <constraint firstItem="dlz-0Y-iKt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="w94-yi-pY8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -153,6 +181,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="actionLbl" destination="j1D-VN-4db" id="7BE-lT-QE9"/>
+                        <outlet property="player1AttackBtn" destination="lXa-9G-aNt" id="Wyh-2S-m5D"/>
+                        <outlet property="player2AttackBtn" destination="r42-S9-oH7" id="XdS-Pj-Xk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
