@@ -24,22 +24,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onPlayer1AttackPressed(sender: AnyObject) {
-        player2.takeAttack(player1.attackPwr)
-        if player2.isAlive {
-            actionLbl.text = "\(player2.name) took \(player1.attackPwr) damage"
-        } else {
-            actionLbl.text = "\(player2.name) has been slain! \(player1.name) wins!"
-            gameOver()
-        }
+        attack(player1, attacked: player2)
     }
     
     
     @IBAction func onPlayer2AttackPressed(sender: AnyObject) {
-        player1.takeAttack(player2.attackPwr)
-        if player1.isAlive {
-            actionLbl.text = "\(player1.name) took \(player2.attackPwr) damage"
+        attack(player2, attacked: player1)
+    }
+    
+    func attack(attacker: Character, attacked: Character) {
+        attacked.takeAttack(attacker.attackPwr)
+        if attacked.isAlive {
+            actionLbl.text = "\(attacked.name) took \(attacker.attackPwr) damage"
         } else {
-            actionLbl.text = "\(player1.name) has been slain! \(player2.name) wins!"
+            actionLbl.text = "\(attacked.name) has been slain! \(attacker.name) wins!"
             gameOver()
         }
     }
