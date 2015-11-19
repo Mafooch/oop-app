@@ -67,13 +67,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player1attackbtn" translatesAutoresizingMaskIntoConstraints="NO" id="qnT-GP-04d">
-                                <rect key="frame" x="87" y="237" width="135" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="lIB-sF-XBG"/>
-                                    <constraint firstAttribute="height" constant="130" id="wNX-dw-QAx"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="8xU-wI-2Xb">
                                 <rect key="frame" x="365" y="392" width="159" height="149"/>
                                 <constraints>
@@ -89,21 +82,30 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player2attackbtn" translatesAutoresizingMaskIntoConstraints="NO" id="BYJ-FG-wzf">
-                                <rect key="frame" x="379" y="275" width="132" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-9G-aNt">
+                                <rect key="frame" x="87" y="275" width="125" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="8PK-Y4-zmr"/>
-                                    <constraint firstAttribute="width" constant="132" id="KTi-w6-VR7"/>
+                                    <constraint firstAttribute="height" constant="46" id="gIF-rF-Xy7"/>
+                                    <constraint firstAttribute="width" constant="125" id="q1i-df-MyR"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-oD-xQ1">
-                                <rect key="frame" x="396" y="287" width="97" height="25"/>
+                                <state key="normal" image="player1attackbtn"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbL-3Y-8oG">
+                                <rect key="frame" x="101" y="285" width="97" height="25"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbL-3Y-8oG">
-                                <rect key="frame" x="106" y="287" width="97" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r42-S9-oH7">
+                                <rect key="frame" x="382" y="277" width="125" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="FSO-n3-UQP"/>
+                                    <constraint firstAttribute="width" constant="125" id="uu4-ka-FZr"/>
+                                </constraints>
+                                <state key="normal" image="player2attackbtn"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-oD-xQ1">
+                                <rect key="frame" x="396" y="287" width="97" height="25"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -113,22 +115,22 @@
                         <constraints>
                             <constraint firstItem="Ew6-rU-kzA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="13U-SP-JW3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jpe-cw-etU" secondAttribute="bottom" constant="20" id="8K3-MI-9Tg"/>
-                            <constraint firstItem="Ew6-rU-kzA" firstAttribute="centerX" secondItem="qnT-GP-04d" secondAttribute="centerX" id="Aq7-Qd-WDb"/>
+                            <constraint firstItem="fbL-3Y-8oG" firstAttribute="centerY" secondItem="lXa-9G-aNt" secondAttribute="centerY" id="91v-MW-Fmv"/>
+                            <constraint firstItem="Jd3-oD-xQ1" firstAttribute="centerY" secondItem="r42-S9-oH7" secondAttribute="centerY" id="Ayr-xs-kWQ"/>
                             <constraint firstItem="9M6-et-Rb4" firstAttribute="leading" secondItem="xdn-Vs-DaQ" secondAttribute="trailing" id="GDO-mK-trZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pf0-Ql-fnI" secondAttribute="bottom" id="HI5-LH-GLF"/>
-                            <constraint firstItem="Jd3-oD-xQ1" firstAttribute="centerY" secondItem="BYJ-FG-wzf" secondAttribute="centerY" id="MyQ-Q4-vXg"/>
+                            <constraint firstItem="Ew6-rU-kzA" firstAttribute="centerX" secondItem="lXa-9G-aNt" secondAttribute="centerX" id="IU6-hn-a97"/>
                             <constraint firstItem="j1D-VN-4db" firstAttribute="centerY" secondItem="Jpe-cw-etU" secondAttribute="centerY" id="N6r-RN-uma"/>
-                            <constraint firstItem="fbL-3Y-8oG" firstAttribute="centerY" secondItem="qnT-GP-04d" secondAttribute="centerY" id="NfI-Nb-CAl"/>
-                            <constraint firstItem="Jd3-oD-xQ1" firstAttribute="centerX" secondItem="BYJ-FG-wzf" secondAttribute="centerX" id="OXy-D6-4sM"/>
+                            <constraint firstItem="Jd3-oD-xQ1" firstAttribute="centerX" secondItem="r42-S9-oH7" secondAttribute="centerX" id="P5O-OT-Dng"/>
+                            <constraint firstItem="8xU-wI-2Xb" firstAttribute="top" secondItem="r42-S9-oH7" secondAttribute="bottom" constant="71" id="Tww-YP-b2g"/>
                             <constraint firstItem="pf0-Ql-fnI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VnH-pL-4Al"/>
                             <constraint firstItem="xdn-Vs-DaQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WIl-qs-1yY"/>
                             <constraint firstItem="Jpe-cw-etU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOd-nj-x8l"/>
                             <constraint firstItem="pf0-Ql-fnI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XY1-2i-YiV"/>
+                            <constraint firstItem="8xU-wI-2Xb" firstAttribute="centerX" secondItem="r42-S9-oH7" secondAttribute="centerX" id="YTc-Y2-SYf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xdn-Vs-DaQ" secondAttribute="bottom" id="b4N-sS-qTk"/>
-                            <constraint firstItem="8xU-wI-2Xb" firstAttribute="centerX" secondItem="BYJ-FG-wzf" secondAttribute="centerX" id="ciI-AF-HfO"/>
-                            <constraint firstItem="fbL-3Y-8oG" firstAttribute="centerX" secondItem="qnT-GP-04d" secondAttribute="centerX" id="eCa-fT-vgP"/>
-                            <constraint firstItem="8xU-wI-2Xb" firstAttribute="top" secondItem="BYJ-FG-wzf" secondAttribute="bottom" constant="63" id="ery-aE-4lO"/>
-                            <constraint firstItem="Ew6-rU-kzA" firstAttribute="top" secondItem="qnT-GP-04d" secondAttribute="bottom" constant="25" id="fQz-CK-bF2"/>
+                            <constraint firstItem="Ew6-rU-kzA" firstAttribute="top" secondItem="lXa-9G-aNt" secondAttribute="bottom" constant="71" id="deP-dk-tXl"/>
+                            <constraint firstItem="fbL-3Y-8oG" firstAttribute="centerX" secondItem="lXa-9G-aNt" secondAttribute="centerX" id="eMx-aN-Pql"/>
                             <constraint firstItem="Jpe-cw-etU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4j-un-fgb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9M6-et-Rb4" secondAttribute="bottom" id="hDj-n9-Tjs"/>
                             <constraint firstItem="Jpe-cw-etU" firstAttribute="top" secondItem="8xU-wI-2Xb" secondAttribute="bottom" constant="14" id="ir2-up-fbe"/>
