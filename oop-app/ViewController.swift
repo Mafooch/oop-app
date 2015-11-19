@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionLbl: UILabel!
     @IBOutlet weak var player1AttackBtn: UIButton!
     @IBOutlet weak var player2AttackBtn: UIButton!
+    @IBOutlet weak var playAgainBtn: UIButton!
     
     var player1: Character!
     var player2: Character!
@@ -41,16 +42,22 @@ class ViewController: UIViewController {
             actionLbl.text = "\(player1.name) has been slain! \(player2.name) wins!"
             gameOver()
         }
-        
+    }
+    
+    
+    @IBAction func onPlayAgainPressed(sender: AnyObject) {
+        resetGame()
     }
     
     func gameOver() {
         player1AttackBtn.enabled = false
         player2AttackBtn.enabled = false
+        playAgainBtn.hidden = false
     }
     
     func resetGame() {
         setupPlayers()
+        playAgainBtn.hidden = true
         player1AttackBtn.enabled = true
         player2AttackBtn.enabled = true
     }

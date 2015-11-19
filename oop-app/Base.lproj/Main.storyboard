@@ -62,7 +62,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1 attacks for 25 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-VN-4db">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-VN-4db">
                                 <rect key="frame" x="107" y="561" width="396" height="34"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,7 +117,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-0Y-iKt">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-0Y-iKt">
                                 <rect key="frame" x="211" y="116" width="156" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="LfO-Es-6y3"/>
@@ -135,6 +135,9 @@
                                         <exclude reference="lI7-fb-VsA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onPlayAgainPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thS-aH-aE4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -183,6 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="actionLbl" destination="j1D-VN-4db" id="7BE-lT-QE9"/>
+                        <outlet property="playAgainBtn" destination="dlz-0Y-iKt" id="5ow-1a-wV3"/>
                         <outlet property="player1AttackBtn" destination="lXa-9G-aNt" id="Wyh-2S-m5D"/>
                         <outlet property="player2AttackBtn" destination="r42-S9-oH7" id="XdS-Pj-Xk4"/>
                     </connections>
