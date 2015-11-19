@@ -25,11 +25,22 @@ class ViewController: UIViewController {
     
     @IBAction func onPlayer1AttackPressed(sender: AnyObject) {
         attack(player1, attacked: player2)
+        player1AttackBtn.enabled = false
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("enableAttackBtn1"), userInfo: nil, repeats: false)
     }
     
+    func enableAttackBtn1() {
+        player1AttackBtn.enabled = true
+    }
     
     @IBAction func onPlayer2AttackPressed(sender: AnyObject) {
         attack(player2, attacked: player1)
+        player2AttackBtn.enabled = false
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("enableAttackBtn2"), userInfo: nil, repeats: false)       
+    }
+    
+    func enableAttackBtn2() {
+        player2AttackBtn.enabled = true
     }
     
     func attack(attacker: Character, attacked: Character) {
